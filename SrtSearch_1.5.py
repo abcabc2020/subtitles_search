@@ -280,11 +280,7 @@ def chooseSrt():#字幕分配处理
                     ######移动字幕文件夹####
                     ss=os.path.split(srtpath)
                     if re.search("abc2020自提",ss[1])or re.search("自提",ss[1]) :
-                        finishdir=os.path.join(os.path.dirname(ss[0]),FinishDirName)
-                        mode=2
-                        srtdir=srtdirfinish(ss[0], finishdir, cmode, mode)
-                        srtpath=os.path.join(srtdir,ss[1])
-                        spath[0]=srtpath
+                        print('恭喜 找到一个作者本人自提的字幕！')
 
                     else:
                         finishdir=os.path.join(os.path.dirname(srtpath),FinishDirName)
